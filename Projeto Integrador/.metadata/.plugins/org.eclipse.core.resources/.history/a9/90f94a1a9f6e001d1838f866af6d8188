@@ -1,0 +1,25 @@
+package classe;
+
+public class Funcionario extends Pessoa {
+
+	@Override
+	public String toString() {
+		return "Funcionario [toString()=" + super.toString() + ", getSetor()=" + getSetor() + ", getFuncao()="
+				+ getFuncao() + ", getSalario()=" + getSalario() + ", getNome()=" + getNome() + ", getCpf()=" + getCpf()
+				+ ", getDataNascimento()=" + getDataNascimento() + ", getEndereco()=" + getEndereco() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + "]";
+	}
+
+	public Funcionario() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Funcionario(String nome, String cpf, String dataNascimento, String endereco, String setor, String funcao,
+			double salario) {
+		super(nome, cpf, dataNascimento, endereco, setor, funcao, salario);
+		// TODO Auto-generated constructor stub
+	}
+
+	
+}

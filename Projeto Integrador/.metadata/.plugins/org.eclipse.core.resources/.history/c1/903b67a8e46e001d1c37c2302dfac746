@@ -1,0 +1,33 @@
+package classe;
+
+
+
+public class Prestador extends Pessoa {
+
+	private String servico;
+	
+	
+	public Prestador() {
+		super();
+		
+	}
+
+	public Prestador(String nome, String cpf, String dataNascimento, String endereco, String setor, String funcao,
+			double salario) {
+	}
+	
+	public String getServico() {
+		return servico;
+	}
+
+	public void setServico(String servico) {
+		this.servico = servico;
+	}
+
+	@Override
+	public String toString() {
+		return "Prestador [toString()=" + super.toString() + ", getNome()=" + getNome() + ", getCpf()=" + getCpf()
+				+ ", getDataNascimento()=" + getDataNascimento() + ", getEndereco()=" + getEndereco() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + "]";
+	}
+}

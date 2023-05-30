@@ -1,0 +1,23 @@
+package classe;
+
+
+
+public class Prestador extends Pessoa {
+
+	@Override
+	public String toString() {
+		return "Prestador [toString()=" + super.toString() + ", getNome()=" + getNome() + ", getCpf()=" + getCpf()
+				+ ", getDataNascimento()=" + getDataNascimento() + ", getEndereco()=" + getEndereco() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + "]";
+	}
+
+	public Prestador() {
+		super();
+		
+	}
+
+	public Prestador(String nome, String cpf, String dataNascimento, String endereco, String setor, String funcao,
+			double salario) {
+		super(nome, cpf, dataNascimento, endereco, setor, funcao, salario);
+	}
+}

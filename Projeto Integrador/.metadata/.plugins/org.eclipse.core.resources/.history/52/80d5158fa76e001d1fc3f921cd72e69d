@@ -1,0 +1,19 @@
+package classe;
+
+public class Fornecedor extends Pessoa{
+
+	public Fornecedor() {
+		super();
+
+	}
+
+
+	@Override
+	public String toString() {
+		return "Fornecedor [getNome()=" + getNome() + ", getCpf()=" + getCpf() + ", getDataNascimento()="
+				+ getDataNascimento() + ", getEndereco()=" + getEndereco() + ", toString()=" + super.toString()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
+	}
+	
+	
+}

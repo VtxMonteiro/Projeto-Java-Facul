@@ -1,0 +1,177 @@
+package classeteste;
+
+import java.util.Scanner;
+
+import classe.Cliente;
+import classe.Endereco;
+import classe.Fornecedor;
+import classe.Funcionario;
+import classe.Pessoa;
+import classe.Produto;
+
+public class ClasseTeste {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner (System.in);
+		
+//		Menu tipo de cadastro
+		
+		System.out.println("Seja bem-vindo, faça seu cadastro!");
+		System.out.println(" ");
+		
+		System.out.println("Informe o tipo de cadastro: ");
+		System.out.println("1. Cliente ");
+		System.out.println("2. Fornecedor ");
+		System.out.println("3. Funcionario ");
+		System.out.println("4. Produto" );
+		char tipoCadastro = sc.nextLine().charAt(0);
+		
+		if (tipoCadastro == '1') {
+			
+			Cliente cliente = new Cliente();
+			
+			System.out.println("Informe seu nome: ");
+			cliente.setNome(sc.nextLine());
+			
+			System.out.println("Informe seu CPF: ");
+			cliente.setCpf(sc.nextLine());
+			
+			System.out.println("Informe sua data de nascimento: ");
+			cliente.setDataNascimento(sc.nextLine());
+			
+			Endereco endereco = new Endereco();
+			
+			System.out.println("Informe seu endereço ");
+			endereco.setRua(sc.nextLine());
+			
+			System.out.println("Informe seu bairro ");
+			endereco.setBairro(sc.nextLine());
+			
+			System.out.println();
+			endereco.setCep(null);
+			
+			System.out.println();
+			endereco.setCidade(null);
+			
+			System.out.println();
+			endereco.setCompletemento(null);
+			
+			System.out.println();
+			endereco.setNumero(null);
+			
+			System.out.println();
+			endereco.setRua(null);
+			cliente.setEndereco(endereco);
+			
+			System.out.println("Cadastro feito com sucesso! Confira seus dados");
+			System.out.println(" ");
+			
+			System.out.println("Nome: " + cliente.getNome());
+			System.out.println("CPF: " + cliente.getCpf());
+			System.out.println("Data de nascimento: " + cliente.getDataNascimento());
+			System.out.println(cliente.getEndereco());
+			System.out.println(" ");
+			
+		}
+		
+//		Cadastro de Fornecedor
+		
+		if (tipoCadastro == '2') {
+			
+			Fornecedor fornecedor = new Fornecedor();
+			
+			System.out.println("Informe seu nome: ");
+			fornecedor.setNome(sc.nextLine());
+			
+			System.out.println("Informe seu CPF: ");
+			fornecedor.setCpf(sc.nextLine());
+			
+			System.out.println("Informe sua data de nascimento: ");
+			fornecedor.setDataNascimento(sc.nextLine());
+			
+			System.out.println("Nome: " + fornecedor.getNome());
+			System.out.println("CPF: " + fornecedor.getCpf());
+			System.out.println("Data de nascimento: " + fornecedor.getDataNascimento());
+			System.out.println(" ");
+		}
+		
+//		Cadastro de Funcionario
+		
+		if (tipoCadastro == '3') {
+			
+			Funcionario funcionario = new Funcionario();
+			
+			System.out.println("Cadastrar novo funcionario ");
+			System.out.println(" ");
+			
+			System.out.println("Informe o nome do funcionário (a): ");
+			funcionario.setNome(sc.nextLine());
+			
+			System.out.println("Informe o setor do funcionário: ");
+			funcionario.setSetor(sc.nextLine());
+					
+			System.out.println("Informe a função do funcionário: ");
+			funcionario.setFuncao(sc.nextLine());
+			
+			System.out.println("Informe o salário do funcionário: ");
+			funcionario.setSalario(sc.nextDouble());
+			
+			System.out.println("Funcionário (a): " + funcionario.getNome());
+			System.out.println("Setor: " + funcionario.getSetor());
+			System.out.println("Função: " + funcionario.getFuncao());
+			System.out.println("Salário: " + funcionario.getSalario());
+			System.out.println(" ");
+		}
+		
+//		Cadastro de Produto
+		
+		if (tipoCadastro == '4') {
+			
+			Produto produto = new Produto();
+
+			System.out.println("Informe os dados do produto");
+			
+			System.out.println(" ");
+			
+			System.out.println("Cadastre seus produtos");
+			
+			
+			System.out.println("Nome do produto: ");
+			produto.setNome(sc.nextLine());
+			
+			System.out.println("Nome da marca: ");
+			produto.setMarca(sc.nextLine());
+			
+			System.out.println("Validade do produto: ");
+			produto.setValidade(sc.nextLine());
+			
+			System.out.println("Nome do fabricante: ");
+			produto.setFabricante(sc.nextLine());
+			
+			System.out.println("Diga o valor do produto: ");
+			produto.setValor(sc.nextDouble());
+			
+			System.out.println("Informe o nome do fornecedor: ");
+			sc.nextLine();
+			String nome = sc.nextLine();
+			
+			Fornecedor fornecedor = new Fornecedor(nome, null, null, null);
+			produto.setFornecedor(fornecedor);
+		
+			
+			System.out.println("Produto cadastrado com sucesso!");
+			System.out.println(" ");
+			
+			System.out.println("Marca: " + produto.getMarca());
+			System.out.println("Validade: " + produto.getValidade());
+			System.out.println("Fabricante: " + produto.getFabricante());
+			System.out.println("Fornecedor: " + produto.getFornecedor());
+			System.out.println("Valor: " + produto.getValor());
+		}
+		
+		
+		sc.close();
+	}
+
+}

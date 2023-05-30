@@ -1,0 +1,22 @@
+package classe;
+
+public class Fornecedor extends Produto{
+
+	public Fornecedor() {
+		super();
+
+	}
+
+	public Fornecedor(String nome, String marca, String validade, String fabricante, double valor, Fornecedor fornecedor) {
+		super(nome, marca, validade, fabricante, valor, fornecedor);
+		
+	}
+@Override
+	public String toString() {
+		return "Fornecedor [toString()=" + super.toString() + ", getNome()=" + getNome() + ", getMarca()=" + getMarca()
+				+ ", getValidade()=" + getValidade() + ", getFabricante()=" + getFabricante() + ", getValor()="
+				+ getValor() + ", getFornecedor()=" + getFornecedor() + ", getClass()=" + getClass() + ", hashCode()="
+				+ hashCode() + "]";
+	}
+	
+}

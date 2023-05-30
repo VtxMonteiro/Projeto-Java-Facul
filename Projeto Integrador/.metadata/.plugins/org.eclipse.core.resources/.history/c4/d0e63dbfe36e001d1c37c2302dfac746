@@ -1,0 +1,23 @@
+package classe;
+
+public class Fornecedor extends Pessoa{
+
+	public Fornecedor(String string) {
+		super();
+
+	}
+	
+
+	public Fornecedor(String nome, String cpf, String dataNascimento, String endereco, String rua, String bairro,
+			String cep, String cidade, String completemento) {
+		super(nome, cpf, dataNascimento, endereco, rua, bairro, cep, cidade, completemento);
+	}
+
+
+	@Override
+	public String toString() {
+		return   getNome();
+	}
+	
+	
+}

@@ -1,0 +1,27 @@
+package classe;
+
+public class Funcionario extends Pessoa {
+
+	private String matricula;
+	private String setor;
+	private String funcao;
+	private double salario;
+
+	public Funcionario() {
+		super();
+	}
+
+	public Funcionario(String nome, String cpf, String dataNascimento, String endereco, String setor, String funcao,
+			double salario) {
+		super(nome, cpf, dataNascimento, endereco, setor, funcao, salario);
+	}
+	
+	@Override
+	public String toString() {
+		return "Funcionario [toString()=" + super.toString() + ", getSetor()=" + getSetor() + ", getFuncao()="
+				+ getFuncao() + ", getSalario()=" + getSalario() + ", getNome()=" + getNome() + ", getCpf()=" + getCpf()
+				+ ", getDataNascimento()=" + getDataNascimento() + ", getEndereco()=" + getEndereco() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + "]";
+	}
+	
+}
