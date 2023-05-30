@@ -1,1 +1,1 @@
-Olá esse foi meu primeiro projeto na faculdade
+Projeto feito simulando um Mercado, onde temos cadastros de Clientes, Funcionarios, Prestadores de serviços e Fornecedores
